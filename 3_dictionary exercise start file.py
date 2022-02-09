@@ -1,15 +1,17 @@
+from email.errors import HeaderMissingRequiredValue
+import random
 # This program uses a dictionary as a deck of cards.
 
 def main():
     # Create a deck of cards.
-   
+    magicdeck = create_deck()
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
 
 
-
     # Deal the cards.
+    deal_cards(magicdeck,num_cards)
 
 
     
@@ -45,6 +47,7 @@ def create_deck():
             'Queen of Diamonds':10, 'King of Diamonds': 10}
 
     # Return the deck.
+    return(deck)
 
 
 
@@ -54,23 +57,27 @@ def create_deck():
 
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
-
-    
-    
+    Hand_Val = 0
+    Cards_Dealt = 0
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
 
+    if number > 52:
+        print("We only have one deck my guy.")
     
-    
-
+    elif number < 0:
+        print("How would you like to give me cards if we're talking negatives?")
     # Deal the cards and accumulate their values.
     
-
-
-    
-
-    # Display the value of the hand.
+    else:
+        for x in range(number):
+            Dealt = random.choice(list(deck))
+            print(Dealt)
+            Dealtval = deck.pop(Dealt)
+            Hand_Val += Dealtval
+        # Display the value of the hand.
+        print(Hand_Val)
 
     
     

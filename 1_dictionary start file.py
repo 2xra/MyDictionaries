@@ -165,7 +165,7 @@ print()
 print('*****  end section 8 ********')
 print()
 
-
+'''
 print()
 print('*****  start section 9 - using pop method ********')
 print()
@@ -176,7 +176,7 @@ print(remove)
 print(phonebook)
 
 
-
+'''
 
 
 print()
