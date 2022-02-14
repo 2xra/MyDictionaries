@@ -7,10 +7,10 @@ with open(filetoread) as f:
 
 
 for word in ListOWords:
-    present = wordcount.get(word,"false")
+    present = wordcount.get(word.lower(),"false")
     if present == 'false':
-        wordcount[word] = 1
+        wordcount[word.lower()] = 1
     else:
-        wordcount[word] += 1
+        wordcount[word.lower()] += 1
 
-print(data)
+print(wordcount)
