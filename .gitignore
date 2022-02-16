@@ -1,2 +1,4 @@
 .venv/
 WorldSeriesWinners.txt
+test.txt
+.gitignore

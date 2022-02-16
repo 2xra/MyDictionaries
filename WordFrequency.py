@@ -3,7 +3,10 @@ wordcount = {}
 ParseMePlease = open(filetoread,"r")
 with open(filetoread) as f:
     content = f.readlines()
-    ListOWords = content[0].split()
+    ListOWords = []
+    for item in content:
+        ListOWords += item.split()
+        
 
 
 for word in ListOWords:
